@@ -5,6 +5,8 @@ class Partida():
 		for i in range(0, len(ronda)):
 			if ronda[i][0] == 10 and ronda[i][1] == 0:
 				suma += sum(ronda[i]) + sum(ronda[i+1])
+				continue
 			else:
 				suma += sum(ronda[i])
+				continue
 		return suma
