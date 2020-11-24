@@ -1,4 +1,6 @@
 class Partida():
-	def dummy_method(self):	
-		return 1
-		
+	def puntuacion(self, ronda):
+		suma = 0
+		for i in range(0, len(ronda)-1):
+			suma += sum(ronda[i])
+			return suma

@@ -2,7 +2,8 @@ import unittest
 from bolos import Partida
 
 class TestBolos(unittest.TestCase):
-	def test_dummy(self):
+	def test_partida_sin_puntos(self):
 		partida = Partida()
-		resultado = partida.dummy_method()
-		self.assertEqual(resultado,0)
+		ronda = [(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 0)
