@@ -7,3 +7,9 @@ class TestBolos(unittest.TestCase):
 		ronda = [(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
 		puntuacion_total = partida.puntuacion(ronda)
 		self.assertEqual(puntuacion_total, 0)
+
+	def test_partida_con_un_punto(self):
+		partida = Partida()
+		ronda = [(1,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 1)
