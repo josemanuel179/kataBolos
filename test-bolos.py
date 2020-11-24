@@ -46,9 +46,15 @@ class TestBolos(unittest.TestCase):
 
 	def test_partida_con_varios_strikes_2(self):
 		partida = Partida()
-		ronda = [(10,0),(8,1),(6,4),(4,3),(1,1),(2,4),(10,0),(0,1),(7,0),(2,0)]
+		ronda = [(10,0),(8,1),(6,3),(4,3),(1,1),(2,4),(10,0),(0,1),(7,0),(2,0)]
 		puntuacion_total = partida.puntuacion(ronda)
-		self.assertEqual(puntuacion_total, 74)
+		self.assertEqual(puntuacion_total, 73)
+
+	def test_partida_con_spare(self):
+		partida = Partida()
+		ronda = [(6,4),(5,2),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 22)
 
 
 
