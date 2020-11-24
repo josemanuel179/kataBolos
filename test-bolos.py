@@ -94,9 +94,15 @@ class TestBolos(unittest.TestCase):
 
 	def test_partida_con_bonus(self):
 		partida = Partida()
-		ronda = [(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(10,2),(3,5)]
+		ronda = [(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(10,0),(3,5)]
 		puntuacion_total = partida.puntuacion(ronda)
 		self.assertEqual(puntuacion_total, 26)
+
+	def test_partida_con_bonus_2(self):
+		partida = Partida()
+		ronda = [(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(6,4),(3,5)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 21)
 
 
 
