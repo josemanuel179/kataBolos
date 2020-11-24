@@ -104,6 +104,12 @@ class TestBolos(unittest.TestCase):
 		puntuacion_total = partida.puntuacion(ronda)
 		self.assertEqual(puntuacion_total, 21)
 
+	def test_tirada_incorrecta(self):
+		partida = Partida()
+		ronda = [(10,2),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertFalse(puntuacion_total, 12)
+
 
 
 
