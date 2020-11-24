@@ -68,6 +68,13 @@ class TestBolos(unittest.TestCase):
 		puntuacion_total = partida.puntuacion(ronda)
 		self.assertEqual(puntuacion_total, 70)
 
+	def test_partida_con_varios_spares(self):
+		partida = Partida()
+		ronda = [(5,5),(3,2),(2,8),(6,2),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 42)
+
+
 
 
 
