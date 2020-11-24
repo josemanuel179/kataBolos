@@ -25,3 +25,9 @@ class TestBolos(unittest.TestCase):
 		ronda = [(10,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
 		puntuacion_total = partida.puntuacion(ronda)
 		self.assertEqual(puntuacion_total, 10)
+
+	def test_partida_con_strike_y_puntos(self):
+		partida = Partida()
+		ronda = [(10,0),(0,0),(5,0),(6,0),(5,0),(0,1),(0,4),(0,0),(1,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 32)
