@@ -13,6 +13,9 @@ class Partida():
 					else:
 						suma += sum(ronda[i])
 						break
+				elif i == 10:
+						suma += sum(ronda[i])
+						break
 				else:
 					if ronda[i][0] == 10 and ronda[i][1] == 0:
 						suma += sum(ronda[i]) + sum(ronda[i+1])

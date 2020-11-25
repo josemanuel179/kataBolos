@@ -110,7 +110,47 @@ class TestBolos(unittest.TestCase):
 		puntuacion_total = partida.puntuacion(ronda)
 		self.assertFalse(puntuacion_total, 12)
 
+	def test_tirada_spare_strike(self):
+		partida = Partida()
+		ronda = [(5,5),(10,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 30)
 
+	def test_tirada_strike_spare(self):
+		partida = Partida()
+		ronda = [(10,0),(5,5),(1,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0),(0,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 32)
+
+	def test_partida_random_1(self):
+		partida = Partida()
+		ronda = [(6,3),(10,0),(5,3),(5,5),(2,8),(4,0),(1,1),(4,5),(2,3),(1,5)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 87)
+
+	def test_partida_random_2(self):
+		partida = Partida()
+		ronda = [(10,0),(10,0),(10,0),(10,0),(10,0),(10,0),(10,0),(10,0),(10,0),(10,0),(10,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 210)
+
+	def test_partida_random_3(self):
+		partida = Partida()
+		ronda = [(5,4),(2,4),(4,5),(6,4),(5,3),(2,2),(1,9),(6,0),(10,0),(5,0)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 93)
+
+	def test_partida_random_4(self):
+		partida = Partida()
+		ronda = [(5,3),(7,1),(6,2),(10,0),(6,0),(5,1),(9,1),(4,2),(8,1),(5,2)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 88)
+
+	def test_partida_random_5(self):
+		partida = Partida()
+		ronda = [(5,2),(3,5),(10,0),(6,2),(6,1),(9,1),(5,1),(10,0),(9,1),(7,1)]
+		puntuacion_total = partida.puntuacion(ronda)
+		self.assertEqual(puntuacion_total, 114)
 
 
 
