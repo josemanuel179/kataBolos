@@ -1,3 +1,3 @@
 class Partida():
-	def prueba(self):
+	def prueba(self, ronda):
 		return 1
