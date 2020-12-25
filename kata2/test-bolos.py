@@ -5,4 +5,4 @@ class TestBolos(unittest.TestCase):
 	def test_dummy(self):
 		partida = Partida()
 		puntuacion = partida.prueba()
-		self.assertEqual(puntuacion, 0)
+		self.assertEqual(puntuacion, 1)
