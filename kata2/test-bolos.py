@@ -11,3 +11,8 @@ class TestBolos(unittest.TestCase):
 		partida = Partida()
 		puntuacion = partida.prueba([1,0,0,0,0,0,0,0,0,0])
 		self.assertEqual(puntuacion, 1)
+
+	def test_romda_con_varios_puntos(self):
+		partida = Partida()
+		puntuacion = partida.prueba([1,2,3,4,5,0,0,0,0,0])
+		self.assertEqual(puntuacion, 15)
