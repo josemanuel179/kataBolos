@@ -21,3 +21,8 @@ class TestBolos(unittest.TestCase):
 		partida = Partida()
 		puntuacion = partida.prueba([10,0,0,0,0,0,0,0,0,0])
 		self.assertEqual(puntuacion, 10)
+
+	def test_romda_con_strike_y_punto(self):
+		partida = Partida()
+		puntuacion = partida.prueba([10,3,0,0,0,0,0,0,0,0])
+		self.assertEqual(puntuacion, 16)
