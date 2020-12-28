@@ -4,6 +4,7 @@
 Breve Explicación de lo que hace el código
  
 **Sistema Operativo:** openSUSE Tumbleweed ____
+
 **Lenguaje de programación:** Python 3.___
 
 ## Instalación
