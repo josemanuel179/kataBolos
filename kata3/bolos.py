@@ -1,3 +1,3 @@
 class Partida():
-	def puntuacion(self):
-		return 0
+	def puntuacion(self, ronda):
+		return 1
